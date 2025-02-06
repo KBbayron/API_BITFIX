@@ -1,5 +1,5 @@
 const { server, db } = require('./config/config'); // Importa la configuración
-const routes = require('./src/routes/git '); // Importa las rutas
+const routes = require('./src/routes/index'); // Importa las rutas
 const { Server } = require('./server'); // Importa la clase Server
 
 // Crear una instancia del servidor

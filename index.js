@@ -1,22 +1,24 @@
-const express = require('express');
-var cors = require('cors');
-const connection = require('./src/DB/connection');
+const { server, db } = require('./config/config'); // Importa la configuración
+const routes = require('./src/routes/git '); // Importa las rutas
+const { Server } = require('./server'); // Importa la clase Server
 
-// const userRoute = require('./routes/user');
-// const categoryRoute = require('./routes/category');
-// const productRoute = require('./routes/product');
-// const billRoute = require('./routes/bill');
-// const dashBoardRoute = require('./routes/dashBoard');
+// Crear una instancia del servidor
+const serverInstance = new Server(server.port, routes);
 
-const app = express();
-app.use(cors());
-app.use(express.urlencoded({extended: true}));
-app.use(express.json());
+// Función principal para iniciar el servidor
+async function main() {
+    try {
+        // Aquí podrías agregar la conexión a la base de datos si es necesario
+        console.log('Conectando a la base de datos...');
+        console.log(db); // Muestra la configuración de la base de datos
+        console.log('Base de datos conectada.');
 
-// app.use('/user', userRoute);
-// app.use('/category', categoryRoute);
-// app.use('/product', productRoute);
-// app.use('/bill', billRoute);
-// app.use('/dashboard', dashBoardRoute);
+        // Iniciar el servidor
+        await serverInstance.listen();
+    } catch (error) {
+        console.error('Error al iniciar el servidor:', error);
+    }
+}
 
-module.exports = app;
+// Llamar a la función principal
+main();

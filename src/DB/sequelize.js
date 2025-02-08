@@ -4,7 +4,7 @@ const models = require('./models')
 
 const sequelizeOptions = {
   dialect: 'mysql',
-  logging: IS_PROD ? false : console.log,
+  logging: false,
 }
 
 if (IS_PROD) {

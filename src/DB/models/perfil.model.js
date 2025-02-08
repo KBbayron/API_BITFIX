@@ -1,7 +1,8 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database'); // Asegúrate de tener la configuración de la base de datos
+const { Model, DataTypes } = require('sequelize');
 
-const Perfil = sequelize.define('Perfil', {
+const PERFIL_TABLE = 'profiles';
+
+const perfilSchema = {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -29,9 +30,29 @@ const Perfil = sequelize.define('Perfil', {
     type: DataTypes.STRING(255),
     allowNull: true
   }
-}, {
-  tableName: 'perfil',
-  timestamps: false
-});
+};
 
-module.exports = Perfil;
+class Perfil extends Model {
+  static associate(models) {
+    // Definir asociaciones aquí si existen
+  }
+
+  static config(sequelize) {
+    if (!sequelize) {
+      throw new Error("Sequelize instance is required");
+    }
+    
+    return {
+      sequelize,
+      tableName: PERFIL_TABLE,
+      modelName: 'Perfil',
+      timestamps: false,
+    };
+  }
+}
+
+module.exports = {
+  PERFIL_TABLE,
+  perfilSchema,
+  Perfil,
+};

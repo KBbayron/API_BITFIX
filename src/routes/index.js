@@ -1,11 +1,8 @@
-const express = require('express');
-const router = express.Router();
+const perfilRouter = require('./perfil.route');  // Asegúrate de importar la ruta correctamente
 
-// Importar rutas individuales
-
-
-// Usar las rutas importadas
-
-
-// Exportar el enrutador principal
-module.exports = router;
+module.exports = [
+  {
+    path: perfilRouter.path,  // Asegúrate de que el path esté definido correctamente en perfil.router
+    router: perfilRouter.router
+  }
+];

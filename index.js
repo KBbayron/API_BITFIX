@@ -1,24 +1,12 @@
-const { server, db } = require('./config/config'); // Importa la configuración
-const routes = require('./src/routes/index'); // Importa las rutas
-const { Server } = require('./server'); // Importa la clase Server
+const { Server } = require('./server')
+const routes = require('./src/routes/index')
 
-// Crear una instancia del servidor
-const serverInstance = new Server(server.port, routes);
+const { PORT } = require('./src/config/config')
 
-// Función principal para iniciar el servidor
+const server = new Server(PORT, routes)
+
 async function main() {
-    try {
-        // Aquí podrías agregar la conexión a la base de datos si es necesario
-        console.log('Conectando a la base de datos...');
-        console.log(db); // Muestra la configuración de la base de datos
-        console.log('Base de datos conectada.');
-
-        // Iniciar el servidor
-        await serverInstance.listen();
-    } catch (error) {
-        console.error('Error al iniciar el servidor:', error);
-    }
+  await server.listen()
 }
 
-// Llamar a la función principal
-main();
+main()

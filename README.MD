@@ -4,6 +4,9 @@
 Esta API permite comunicar con la base de datos de BiteFix en diferentes endpoints con la ruta base:
 https://127.0.0.1:3000/api/v1/
 
+## Diagrama de base de datos
+https://drive.google.com/file/d/1ksgCxqgDz-ynll0Bds3gj7SgzT22qk77/view?usp=drive_link
+
 ## Instalación:
 1. Clonar el repositorio
 2. En una terminal en la dirección del repositorio clonado: 

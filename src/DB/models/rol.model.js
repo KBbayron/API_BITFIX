@@ -1,7 +1,8 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+const { Model, DataTypes } = require('sequelize');
 
-const Rol = sequelize.define('Rol', {
+const ROL_TABLE = 'roles';
+
+const rolesSchema = {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -19,9 +20,24 @@ const Rol = sequelize.define('Rol', {
     type: DataTypes.TIMESTAMP,
     defaultValue: DataTypes.NOW
   }
-}, {
-  tableName: 'rol',
-  timestamps: false
-});
+};
 
-module.exports = Rol;
+class Rol extends Model {
+  static associate(models) {
+    // Definir asociaciones aquí si existen
+  }
+  static config(sequelize) {
+    return {
+      sequelize,
+      tableName: ROL_TABLE,
+      modelName: 'Rol',
+      timestamps: false,
+    };
+  }
+}
+
+module.exports = {
+  ROL_TABLE,
+  rolesSchema,
+  Rol,
+};

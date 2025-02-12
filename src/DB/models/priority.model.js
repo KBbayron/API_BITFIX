@@ -1,7 +1,8 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+const { Model, DataTypes } = require('sequelize');
 
-const Priority = sequelize.define('Priority', {
+const PRIORITY_TABLE = 'priorities';
+
+const prioritiesSchema = {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -14,14 +15,25 @@ const Priority = sequelize.define('Priority', {
   create_ad: {
     type: DataTypes.TIMESTAMP,
     defaultValue: DataTypes.NOW
-  },
-  description: {
-    type: DataTypes.STRING(255),
-    allowNull: true
   }
-}, {
-  tableName: 'priorities',
-  timestamps: false
-});
+};
 
-module.exports = Priority;
+class Priority extends Model {
+  static associate(models) {
+    // Definir asociaciones aquí si existen
+  }
+  static config(sequelize) {
+    return {
+      sequelize,
+      tableName: PERFIL_TABLE,
+      modelName: 'Priority',
+      timestamps: false,
+    };
+  }
+}
+
+module.exports = {
+  PRIORITY_TABLE,
+  prioritiesSchema,
+  Priority,
+};

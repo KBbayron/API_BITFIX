@@ -1,9 +1,10 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
-const Device = require('./Device');
-const Priority = require('./Priority');
+const { Model, DataTypes } = require('sequelize');
+const { Priority } = require('./priority.model'); 
+const { Device } = require('./device.model'); 
 
-const Repair = sequelize.define('Repair', {
+const REPAIR_TABLE = 'repairs';
+
+const repairsSchema = {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -31,9 +32,23 @@ const Repair = sequelize.define('Repair', {
       key: 'id'
     }
   }
-}, {
-  tableName: 'repairs',
-  timestamps: false
-});
+};
 
-module.exports = Repair;
+class Repair extends Model {
+  static associate(models) {
+    // Definir asociaciones aquí si existen
+  }
+  static config(sequelize) {
+    return {
+      sequelize,
+      tableName: REPAIR_TABLE,
+      modelName: 'Repair',
+      timestamps: false,
+  }};
+}
+
+module.exports = {
+  REPAIR_TABLE,
+  repairsSchema,
+  Repair,
+};

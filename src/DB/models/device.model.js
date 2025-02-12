@@ -1,8 +1,8 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
-const User = require('./User');
+const { Model, DataTypes } = require('sequelize');
+const { User } = require('./user.model');
 
-const Device = sequelize.define('Device', {
+const DEVICE_TABLE = 'devices';
+const devicesSchema = {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -31,9 +31,24 @@ const Device = sequelize.define('Device', {
       key: 'id'
     }
   }
-}, {
-  tableName: 'device',
-  timestamps: false
-});
+};
 
-module.exports = Device;
+class Device extends Model {
+  static associate(models) {
+    // Definir asociaciones aquí si existen
+  }
+  static config(sequelize) {
+    return {
+      sequelize,
+      tableName: DEVICE_TABLE,
+      modelName: 'Device',
+      timestamps: false,
+    };
+  }
+}
+
+module.exports = {
+  DEVICE_TABLE,
+  devicesSchema,
+  Device,
+};

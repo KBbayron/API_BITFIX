@@ -1,8 +1,8 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
-const User = require('./User');
+const { Model, DataTypes } = require('sequelize');
+const { User } = require('./user.model'); 
 
-const Consultation = sequelize.define('Consultation', {
+const CONSULTATIONS_TABLE = 'consultations';
+const constationsSchema = {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -30,9 +30,24 @@ const Consultation = sequelize.define('Consultation', {
     type: DataTypes.STRING(255),
     allowNull: true
   }
-}, {
-  tableName: 'consultations',
-  timestamps: false
-});
+};
 
-module.exports = Consultation;
+class Consultation extends Model {
+  static associate(models) {
+    // Definir asociaciones aquí si existen
+  }
+  static config(sequelize) {
+    return {
+      sequelize,
+      tableName: CONSULTATIONS_TABLE,
+      modelName: 'Consultation',
+      timestamps: false,
+    };
+  }
+}
+
+module.exports = {
+  CONSULTATIONS_TABLE,
+  constationsSchema,
+  Consultation,
+};

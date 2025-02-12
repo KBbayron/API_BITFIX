@@ -36,12 +36,7 @@ class Perfil extends Model {
   static associate(models) {
     // Definir asociaciones aquí si existen
   }
-
   static config(sequelize) {
-    if (!sequelize) {
-      throw new Error("Sequelize instance is required");
-    }
-    
     return {
       sequelize,
       tableName: PERFIL_TABLE,

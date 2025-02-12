@@ -1,8 +1,8 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
-const Repair = require('./Repair');
+const { Model, DataTypes } = require('sequelize');
+const { Repair } = require('./repairs.model'); 
 
-const Ticket = sequelize.define('Ticket', {
+const TICKET_TABLE = 'ticket';
+const ticketsSchema = {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -27,9 +27,24 @@ const Ticket = sequelize.define('Ticket', {
     type: DataTypes.DECIMAL(10, 2),
     allowNull: false
   }
-}, {
-  tableName: 'ticket',
-  timestamps: false
-});
+};
 
-module.exports = Ticket;
+class Ticket extends Model {
+  static associate(models) {
+    // Definir asociaciones aquí si existen
+  }
+  static config(sequelize) {
+    return {
+      sequelize,
+      tableName: TICKET_TABLE,
+      modelName: 'Rol',
+      timestamps: false,
+    };
+  }
+}
+
+module.exports = {
+  TICKET_TABLE,
+  ticketsSchema,
+  Ticket,
+};

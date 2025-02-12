@@ -39,7 +39,15 @@ const usersSchema = {
 
 class User extends Model {
   static associate(models) {
-    // Definir asociaciones aquí si existen
+    this.belongsTo(models.Perfil, {
+      foreignKey: 'perfil_id',
+      as: 'perfil' 
+    });
+
+    this.belongsTo(models.Rol, {
+      foreignKey: 'rol_id',
+      as: 'rol' 
+    });
   }
   static config(sequelize) {
     return {

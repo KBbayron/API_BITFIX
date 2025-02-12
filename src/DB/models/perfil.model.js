@@ -34,7 +34,10 @@ const perfilSchema = {
 
 class Perfil extends Model {
   static associate(models) {
-    // Definir asociaciones aquí si existen
+    this.hasMany(models.User, {
+      foreignKey: 'perfil_id', 
+      as: 'usuarios'
+    });
   }
   static config(sequelize) {
     return {

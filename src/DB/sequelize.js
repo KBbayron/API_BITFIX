@@ -25,4 +25,4 @@ for (const { model } of models) {
   model.associate(sequelize.models)
 }
 
-module.exports = sequelize
+module.exports = sequelize;

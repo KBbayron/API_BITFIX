@@ -27,7 +27,7 @@ const constationsSchema = {
     defaultValue: DataTypes.NOW,
     field:'create_ad'
   },
-  mesaje: {
+  messaje: {
     type: DataTypes.STRING(255),
     allowNull: true
   }

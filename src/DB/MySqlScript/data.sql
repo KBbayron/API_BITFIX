@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS consultations (
     transmiter INT NOT NULL,
     recivier INT NOT NULL,
     create_ad TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    mesaje VARCHAR (255),
+    messaje VARCHAR (255),
     FOREIGN KEY (transmiter) REFERENCES user(id) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (recivier) REFERENCES user(id) ON DELETE CASCADE ON UPDATE CASCADE 
 ) ENGINE = INNODB; 
@@ -132,7 +132,7 @@ INSERT INTO device (branch, model, `type`, `description`, user_id) VALUES
 ('Razer', 'Blade 15', 'Laptop', 'Laptop gamer premium', 10);
 
 -- Insertar datos en la tabla consultations
-INSERT INTO consultations (transmiter, recivier, mesaje) VALUES
+INSERT INTO consultations (transmiter, recivier, messaje) VALUES
 (1, 2, 'Hola, ¿cómo estás?'),
 (2, 3, 'Tengo un problema con el equipo, ¿puedes ayudarme?'),
 (3, 4, '¿Cuándo estará listo mi dispositivo?'),

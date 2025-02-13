@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const { User } = require('./user.model'); 
+const { User_TABLE } = require('./user.model'); 
 
 const CONSULTATIONS_TABLE = 'consultations';
 const constationsSchema = {
@@ -11,20 +11,21 @@ const constationsSchema = {
   transmiter: {
     type: DataTypes.INTEGER,
     references: {
-      model: User,
+      model: User_TABLE,
       key: 'id'
     }
   },
   recivier: {
     type: DataTypes.INTEGER,
     references: {
-      model: User,
+      model: User_TABLE,
       key: 'id'
     }
   },
-  create_ad: {
-    type: DataTypes.TIMESTAMP,
-    defaultValue: DataTypes.NOW
+  createAt: {
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW,
+    field:'create_ad'
   },
   mesaje: {
     type: DataTypes.STRING(255),

@@ -12,9 +12,14 @@ const prioritiesSchema = {
     type: DataTypes.STRING(20),
     allowNull: false
   },
-  create_ad: {
-    type: DataTypes.TIMESTAMP,
-    defaultValue: DataTypes.NOW
+  createAt: {
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW,
+    field: 'create_ad',
+  },
+  description: {
+    type: DataTypes.STRING(255),
+    allowNull: true
   }
 };
 
@@ -25,7 +30,7 @@ class Priority extends Model {
   static config(sequelize) {
     return {
       sequelize,
-      tableName: PERFIL_TABLE,
+      tableName: PRIORITY_TABLE,
       modelName: 'Priority',
       timestamps: false,
     };

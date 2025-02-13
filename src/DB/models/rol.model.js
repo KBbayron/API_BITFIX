@@ -16,17 +16,18 @@ const rolesSchema = {
     type: DataTypes.STRING(255),
     allowNull: true
   },
-  create_ad: {
-    type: DataTypes.TIMESTAMP,
-    defaultValue: DataTypes.NOW
+  createAt: {
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW,
+    field:'create_ad'
   }
 };
 
 class Rol extends Model {
   static associate(models) {
-    this.hasMany(models.Rol,{
+    this.hasMany(models.User,{
       foreignKey: 'rol_id', 
-      as: 'roles'
+      as: 'usuarios'
     });
   }
   static config(sequelize) {

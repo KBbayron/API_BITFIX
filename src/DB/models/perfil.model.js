@@ -12,9 +12,10 @@ const perfilSchema = {
     type: DataTypes.STRING(15),
     allowNull: false
   },
-  last_name: {
+  lastName: {
     type: DataTypes.STRING(15),
-    allowNull: false
+    allowNull: false,
+    field:'last_name'
   },
   email: {
     type: DataTypes.STRING(50),
@@ -34,10 +35,10 @@ const perfilSchema = {
 
 class Perfil extends Model {
   static associate(models) {
-    this.hasMany(models.User, {
-      foreignKey: 'perfil_id', 
-      as: 'usuarios'
-    });
+    // this.hasMany(models.User, {
+    //   foreignKey: 'perfil_id', 
+    //   as: 'usuarios'
+    // });
   }
   static config(sequelize) {
     return {

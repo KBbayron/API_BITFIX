@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
-const { Priority } = require('./priority.model'); 
-const { Device } = require('./device.model'); 
+const { PRIORITY_TABLE } = require('./priority.model'); 
+const { DEVICE_TABLE } = require('./device.model'); 
 
 const REPAIR_TABLE = 'repairs';
 
@@ -10,26 +10,29 @@ const repairsSchema = {
     primaryKey: true,
     autoIncrement: true
   },
-  device_id: {
+  deviceId: {
     type: DataTypes.INTEGER,
     references: {
-      model: Device,
-      key: 'id'
+      model: DEVICE_TABLE ,
+      key: 'id',
+      field:'device_id'
     }
   },
   total: {
     type: DataTypes.DECIMAL(10, 2),
     allowNull: true
   },
-  create_ad: {
-    type: DataTypes.TIMESTAMP,
-    defaultValue: DataTypes.NOW
+  createAt: { 
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW,
+    field: 'create_ad'
   },
-  priority_id: {
+  priorityId: {
     type: DataTypes.INTEGER,
     references: {
-      model: Priority,
-      key: 'id'
+      model: PRIORITY_TABLE,
+      key: 'id',
+      field:'priority_id'
     }
   }
 };

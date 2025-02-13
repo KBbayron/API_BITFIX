@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
-const { Perfil } = require('./perfil.model');
-const { Rol } = require('./rol.model');
+const { Perfil_TABLE } = require('./perfil.model');
+const { ROL_TABLE } = require('./rol.model');
 
 const USER_TABLE = 'users';
 const usersSchema = {
@@ -11,15 +11,16 @@ const usersSchema = {
   },
   perfil_id: {
     type: DataTypes.INTEGER,
+    allowNull: false,
     references: {
-      model: Perfil,
+      model: Perfil_TABLE,
       key: 'id'
     }
   },
   rol_id: {
     type: DataTypes.INTEGER,
     references: {
-      model: Rol,
+      model: ROL_TABLE,
       key: 'id'
     }
   },
@@ -31,9 +32,10 @@ const usersSchema = {
     type: DataTypes.STRING(50),
     allowNull: false
   },
-  create_ad: {
-    type: DataTypes.TIMESTAMP,
-    defaultValue: DataTypes.NOW
+  createAt: {
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW,
+    field:'create_ad'
   }
 };
 
@@ -43,7 +45,7 @@ class User extends Model {
       foreignKey: 'perfil_id',
       as: 'perfil' 
     });
-
+    
     this.belongsTo(models.Rol, {
       foreignKey: 'rol_id',
       as: 'rol' 

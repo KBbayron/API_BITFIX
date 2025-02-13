@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const { Repair } = require('./repairs.model'); 
+const { REPAIR_TABLE } = require('./repairs.model'); 
 
 const TICKET_TABLE = 'ticket';
 const ticketsSchema = {
@@ -8,11 +8,12 @@ const ticketsSchema = {
     primaryKey: true,
     autoIncrement: true
   },
-  repair_id: {
+  repairId: {
     type: DataTypes.INTEGER,
     references: {
-      model: Repair,
-      key: 'id'
+      model: REPAIR_TABLE ,
+      key: 'id',
+      filed: 'repair_id'
     }
   },
   solved: {
@@ -37,7 +38,7 @@ class Ticket extends Model {
     return {
       sequelize,
       tableName: TICKET_TABLE,
-      modelName: 'Rol',
+      modelName: 'Ticket',
       timestamps: false,
     };
   }

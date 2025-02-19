@@ -1,6 +1,6 @@
 const { Router } = require('express');
-const Service = require('../services/priority.service');
-const { validatorHandler } = require('../middlewares/validator.handler');
+const PriorityService = require('../services/priority.service');
+const { validatorHandler } = require('../middlewares/validator.hadler');
 const { getPrioritySchema, createPrioritySchema, updatePrioritySchema } = require('../schema/priority.schema');
 
 const path = 'priority';

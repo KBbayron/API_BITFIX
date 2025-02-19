@@ -1,6 +1,6 @@
 const { Router } = require('express');
-const Service = require('../services/rol.service');
-const { validatorHandler } = require('../middlewares/validator.handler');
+const RolService = require('../services/rol.service');
+const { validatorHandler } = require('../middlewares/validator.hadler');
 const { getRolSchema, createRolSchema, updateRolSchema } = require('../schema/rol.schema');
 
 const path = 'rol';

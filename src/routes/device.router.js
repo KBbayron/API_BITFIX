@@ -1,6 +1,6 @@
 const { Router } = require('express');
-const Service = require('../services/device.service');
-const { validatorHandler } = require('../middlewares/validator.handler');
+const DeviceService = require('../services/device.service');
+const { validatorHandler } = require('../middlewares/validator.hadler');
 const { getDeviceSchema, createDeviceSchema, updateDeviceSchema } = require('../schema/device.schema');
 
 const path = 'device';

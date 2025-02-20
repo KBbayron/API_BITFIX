@@ -35,10 +35,10 @@ const perfilSchema = {
 
 class Perfil extends Model {
   static associate(models) {
-    this.hasMany(models.User, {
-      foreignKey: 'perfil_id', 
-      as: 'usuarios'
-    });
+    // this.hasMany(models.User, {
+    //   foreignKey: 'perfil_id', 
+    //   as: 'usuarios'
+    // });
   }
   static config(sequelize) {
     return {

@@ -9,8 +9,8 @@ const userId = Joi.number().integer().positive().required();
 
 const createDeviceSchema = Joi.object({
     branch: branch.required(),
-    model: branch.required(),
-    type: branch.required(),
+    model: model.required(),
+    type: type.required(),
     description,
     userId: userId.required(),
 });

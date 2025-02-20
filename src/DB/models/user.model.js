@@ -1,24 +1,25 @@
 const { Model, DataTypes } = require('sequelize');
-const { Perfil_TABLE } = require('./perfil.model');
+const { PERFIL_TABLE } = require('./perfil.model');
 const { ROL_TABLE } = require('./rol.model');
 
-const USER_TABLE = 'users';
+const USER_TABLE = 'user';
 const usersSchema = {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true
   },
-  perfil_id: {
+  perfilId: {
     type: DataTypes.INTEGER,
-    allowNull: false,
+    field: 'perfil_id',
     references: {
-      model: Perfil_TABLE,
+      model: PERFIL_TABLE,
       key: 'id'
     }
   },
-  rol_id: {
+  rolId: {
     type: DataTypes.INTEGER,
+    field: 'rol_id',  // Corregimos el nombre
     references: {
       model: ROL_TABLE,
       key: 'id'

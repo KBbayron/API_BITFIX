@@ -1,7 +1,7 @@
 const { Router } = require('express');
-const UserService = require('../services/perfil.service');
+const UserService = require('../services/user.service');
 const { validatorHandler } = require('../middlewares/validator.hadler');
-const { getUserSchema, createUserSchema, updateUserSchema } = require('../schema/perfil.schema');
+const { getUserSchema, createUserSchema, updateUserSchema } = require('../schema/user.schema');
 
 const path = 'user';
 const router = Router();

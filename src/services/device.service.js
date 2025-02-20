@@ -1,5 +1,5 @@
 const boom = require('@hapi/boom');
-const { models } = require('../DB/models/device.model');
+const { models } = require('../DB/sequelize');
 
 class DeviceService {
   async create(data) {
@@ -12,6 +12,7 @@ class DeviceService {
 
   async findById(id) {
     const device = await models.Device.findByPk(id);
+    
     if (!device) throw boom.notFound('Dispositivo no encontrado');
     return device;
   }

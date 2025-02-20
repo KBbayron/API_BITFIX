@@ -1,5 +1,5 @@
 const boom = require('@hapi/boom');
-const { models } = require('../DB/models/consultations.model');
+const { models } = require('../DB/sequelize');
 
 class ConsultationService {
   async create(data) {

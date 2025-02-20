@@ -9,7 +9,7 @@ const messaje = Joi.string().max(255);
 const createConsultationSchema = Joi.object({
     transmiter: transmiter.required(),
     recivier: recivier.required(),
-    messaje: mesaje.required()
+    messaje: messaje.required()
 });
 
 const updateConsultationSchema = Joi.object({

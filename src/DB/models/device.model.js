@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
-const { User_TABLE } = require('./user.model');
+const { USER_TABLE } = require('./user.model');
 
-const DEVICE_TABLE = 'devices';
+const DEVICE_TABLE = 'device';
 const devicesSchema = {
   id: {
     type: DataTypes.INTEGER,
@@ -26,10 +26,10 @@ const devicesSchema = {
   },
   userId: {
     type: DataTypes.INTEGER,
+    field: 'user_id',
     references: {
-      model: User_TABLE,
-      key: 'id',
-      filed: 'user_id',
+      model: USER_TABLE,
+      key: 'id'
     }
   }
 };

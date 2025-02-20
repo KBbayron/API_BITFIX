@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const ConsultationService = require('../services/consultation.service');
-const { validatorHandler } = require('../middlewares/validator.handler');
+const { validatorHandler } = require('../middlewares/validator.hadler');
 const { getConsultationSchema, createConsultationSchema, updateConsultationSchema } = require('../schema/consultation.schema');
 
 const pathConsultations = 'consultations';

@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
-const { User_TABLE } = require('./user.model'); 
+const { USER_TABLE } = require('./user.model'); 
 
-const CONSULTATIONS_TABLE = 'consultations';
+const CONSULTATIONS_TABLE = 'consultationS';
 const constationsSchema = {
   id: {
     type: DataTypes.INTEGER,
@@ -11,14 +11,14 @@ const constationsSchema = {
   transmiter: {
     type: DataTypes.INTEGER,
     references: {
-      model: User_TABLE,
+      model: USER_TABLE,
       key: 'id'
     }
   },
   recivier: {
     type: DataTypes.INTEGER,
     references: {
-      model: User_TABLE,
+      model: USER_TABLE,
       key: 'id'
     }
   },

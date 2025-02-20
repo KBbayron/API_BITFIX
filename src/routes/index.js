@@ -5,6 +5,7 @@ const repairRouter = require('./repair.router');
 const rol = require('./rol.router'); 
 const ticketRouter = require('./ticket.router'); 
 const userperfilRouter = require('./user.router');
+const consultation = require('./consultation.router');
 // const deviceRouter = require('./');
 
 module.exports = [
@@ -14,5 +15,6 @@ module.exports = [
   repairRouter,
   rol,
   ticketRouter,
-  userperfilRouter
+  userperfilRouter,
+  consultation
 ];

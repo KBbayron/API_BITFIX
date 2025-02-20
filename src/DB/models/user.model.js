@@ -19,7 +19,7 @@ const usersSchema = {
   },
   rolId: {
     type: DataTypes.INTEGER,
-    field: 'rol_id',  // Corregimos el nombre
+    field: 'rol_id',
     references: {
       model: ROL_TABLE,
       key: 'id'

@@ -10,10 +10,10 @@ const ticketsSchema = {
   },
   repairId: {
     type: DataTypes.INTEGER,
+    field: 'repair_id',
     references: {
       model: REPAIR_TABLE ,
-      key: 'id',
-      filed: 'repair_id'
+      key: 'id'
     }
   },
   solved: {

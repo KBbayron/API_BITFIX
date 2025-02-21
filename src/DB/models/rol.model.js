@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 
-const ROL_TABLE = 'roles';
+const ROL_TABLE = 'rol';
 
 const rolesSchema = {
   id: {

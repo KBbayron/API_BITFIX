@@ -1,5 +1,5 @@
 const boom = require('@hapi/boom');
-const { models } = require('../DB/models/ticket.model');
+const { models } = require('../DB/sequelize');
 
 class TicketService {
   async create(data) {

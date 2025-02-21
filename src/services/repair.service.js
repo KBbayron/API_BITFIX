@@ -1,5 +1,5 @@
 const boom = require('@hapi/boom');
-const { models } = require('../DB/models/repairs.model');
+const { models } = require('../DB/sequelize');
 
 class RepairsyService {
   async create(data) {

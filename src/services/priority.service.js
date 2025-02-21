@@ -1,5 +1,5 @@
 const boom = require('@hapi/boom');
-const { models } = require('../DB/models/priority.model');
+const { models } = require('../DB/sequelize');
 
 class PriorityService {
   async create(data) {

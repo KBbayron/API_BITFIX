@@ -1,5 +1,5 @@
 const boom = require('@hapi/boom');
-const { models } = require('../DB/models/rol.model');
+const { models } = require('../DB/sequelize');
 
 class RolService {
   async create(data) {

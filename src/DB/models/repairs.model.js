@@ -12,10 +12,10 @@ const repairsSchema = {
   },
   deviceId: {
     type: DataTypes.INTEGER,
+    field:'device_id',
     references: {
       model: DEVICE_TABLE ,
-      key: 'id',
-      field:'device_id'
+      key: 'id'
     }
   },
   total: {
@@ -29,10 +29,10 @@ const repairsSchema = {
   },
   priorityId: {
     type: DataTypes.INTEGER,
+    field:'priority_id',
     references: {
       model: PRIORITY_TABLE,
-      key: 'id',
-      field:'priority_id'
+      key: 'id'
     }
   }
 };

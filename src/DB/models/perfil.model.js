@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 
-const PERFIL_TABLE = 'profiles';
+const PERFIL_TABLE = 'perfil';
 
 const perfilSchema = {
   id: {

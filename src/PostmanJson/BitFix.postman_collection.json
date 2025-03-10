@@ -1,0 +1,972 @@
+{
+	"info": {
+		"_postman_id": "164fe199-c4a2-4c99-8a0e-0c72887578fa",
+		"name": "BitFix",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33101219"
+	},
+	"item": [
+		{
+			"name": "perfil",
+			"item": [
+				{
+					"name": "perfil",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"perfilId\": 1,\r\n    \"rolId\": 2,\r\n    \"user\": \"user postman 02\",\r\n    \"password\": \"w654wev61v\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{biteFix}}/user/12",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"user",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "perfil",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"name\",\r\n    \"lastName\": \"lastname\",\r\n    \"email\": \"name@gmail.com\",\r\n    \"phone\": \"54548787\",\r\n    \"address\": \"dbiubcd iabciuasbc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{biteFix}}/perfil/",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"perfil",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "perfil",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/perfil/1",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"perfil",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all perfil",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http:/perfil/",
+							"host": [
+								"http"
+							],
+							"port": "",
+							"path": [
+								"perfil",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/perfil/11",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"perfil",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "get user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/user/1",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/user/",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/user/11",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"user",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"perfilId\": 1,\r\n    \"rolId\": 2,\r\n    \"user\": \"user postman 02\",\r\n    \"password\": \"w654wev61v\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{biteFix}}/user/12",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"user",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"perfilId\": 1,\r\n    \"rolId\": 1,\r\n    \"user\": \"user postman\",\r\n    \"password\": \"w654wev61v\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{biteFix}}/user/",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "repair",
+			"item": [
+				{
+					"name": "repair",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"perfilId\": 1,\r\n    \"rolId\": 2,\r\n    \"user\": \"user postman 02\",\r\n    \"password\": \"w654wev61v\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{biteFix}}/repair/12",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"repair",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "repair",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"name\",\r\n    \"lastName\": \"lastname\",\r\n    \"email\": \"name@gmail.com\",\r\n    \"phone\": \"54548787\",\r\n    \"address\": \"dbiubcd iabciuasbc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{biteFix}}/repair/",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"repair",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all repairs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/perfil/1",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"perfil",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "repair",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/repair/5",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"repair",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reapair",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/perfil/11",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"perfil",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "consultation",
+			"item": [
+				{
+					"name": "consultation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/consultations/1",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"consultations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all consultations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/consultations/",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"consultations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/consultations/11",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"consultations",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update consultation",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transmiter\": 5,\r\n    \"recivier\": 2,\r\n    \"messaje\": \"vibeiuqbviuebv qviucsdv \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{biteFix}}/consultations/11",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"consultations",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transmiter\": 1,\r\n    \"recivier\": 2,\r\n    \"messaje\": \"vibeiuqbviuebv qviuuqv qiv98vqwv \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{biteFix}}/consultations/",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"consultations",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "device",
+			"item": [
+				{
+					"name": "get all devices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/device/12",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"device",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete device",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/device/11",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"device",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update device",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all devices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/device/",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"device",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New device",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"branch\": \"MARCA\",\r\n    \"model\": \"MODELOS\",\r\n    \"type\": \"tipo\",\r\n    \"description\": \"description\",\r\n    \"userId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{biteFix}}/device/",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"device",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rol",
+			"item": [
+				{
+					"name": "rol",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"perfilId\": 1,\r\n    \"rolId\": 2,\r\n    \"user\": \"user postman 02\",\r\n    \"password\": \"w654wev61v\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{biteFix}}/repair/12",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"repair",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rol",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"rolPrueba\",\r\n    \"description\": \"iuaybcabsuicasc\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{biteFix}}/rol/",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"rol",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "roll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/rol/1",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"rol",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all rols",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/rol/",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"rol",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rol",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/perfil/11",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"perfil",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ticket",
+			"item": [
+				{
+					"name": "ticket",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"perfilId\": 1,\r\n    \"rolId\": 2,\r\n    \"user\": \"user postman 02\",\r\n    \"password\": \"w654wev61v\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{biteFix}}/repair/12",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"repair",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"rolPrueba\",\r\n    \"description\": \"iuaybcabsuicasc\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{biteFix}}/rol/",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"rol",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ticket",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/ticket/1",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"ticket",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all tickets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/ticket/",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"ticket",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ticket",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/ticket/1",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"ticket",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "priority",
+			"item": [
+				{
+					"name": "priority",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"perfilId\": 1,\r\n    \"rolId\": 2,\r\n    \"user\": \"user postman 02\",\r\n    \"password\": \"w654wev61v\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{biteFix}}/repair/12",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"repair",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "priority",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"rolPrueba\",\r\n    \"description\": \"iuaybcabsuicasc\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{biteFix}}/priority/",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"priority",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "priority",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/priority/1",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"priority",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all priority",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/priority/",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"priority",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "priority",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{biteFix}}/priority/",
+							"host": [
+								"{{biteFix}}"
+							],
+							"path": [
+								"priority",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"newuser51\",\r\n    \"password\": \"Secure1953\"",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"usuario\": {\r\n    \"username\": \"newuser51\",\r\n    \"password\": \"Secure1953\",\r\n    \"rolId\": 1\r\n  },\r\n  \"perfil\": {\r\n    \"name\": \"John Does155\",\r\n    \"phone\": 97668840,\r\n    \"email\": \"jjjj@example.com\",\r\n    \"empresa\": \"MyCompany\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -18,3 +18,10 @@ https://drive.google.com/file/d/1ksgCxqgDz-ynll0Bds3gj7SgzT22qk77/view?usp=drive
 
 ## Terminar el Servicio de la API:
 Control + c
+
+
+## Comandos de instalacion utilizaods
+1. npm install bcrypt
+2. npm install passport passport-local passport-jwt jsonwebtoken bcryptjs
+3. npm install jsonwebtoken
+4. npm install nodemailer

@@ -1,13 +1,14 @@
-const express = require('express')
-const morgan = require('morgan')
-const cors = require('cors')
-const sequelize = require('./src/DB/sequelize')
+const express = require('express');
+const morgan = require('morgan');
+const cors = require('cors');
+const sequelize = require('./src/DB/sequelize');
 const {
   longError,
   ormErrorHandler,
   boomErrorHandler,
   errorHandler,
 } = require('./src/middlewares/error.hadler')
+const { useAuthStrategies } = require('./utils/strategies/index');
 
 class Server {
   apiRouter = express.Router()
@@ -30,6 +31,7 @@ class Server {
   preMiddlewares() {
     this.app.use(express.json())
     this.app.use(cors())
+    useAuthStrategies()
     this.app.use(morgan('dev'))
   }
 

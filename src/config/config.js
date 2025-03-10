@@ -17,4 +17,6 @@ module.exports = {
   JWT_SECRET: process.env.JWT_SECRET,
   BCRYPT_SALTS: process.env.BCRYPT_SALTS,
   WEB_URL: process.env.WEBSITE_URL,
+  MAILER_EMAIL: process.env.MAILER_EMAIL,
+  MAILER_PASSWORD: process.env.MAILER_PASSWORD
 }

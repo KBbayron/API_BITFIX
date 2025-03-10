@@ -14,7 +14,7 @@ const perfilSchema = {
   },
   lastName: {
     type: DataTypes.STRING(15),
-    allowNull: false,
+    allowNull: true,
     field:'last_name'
   },
   email: {

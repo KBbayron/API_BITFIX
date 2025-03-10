@@ -1,13 +1,13 @@
-CREATE DATABASE IF NOT EXISTS dataBitFix 
+CREATE DATABASE IF NOT EXISTS dataBiteFix 
     CHARACTER SET utf8mb4 
     COLLATE utf8mb4_spanish_ci;
 
-USE dataBitFix;
+USE dataBiteFix;
 
 CREATE TABLE IF NOT EXISTS perfil (
     id INT AUTO_INCREMENT PRIMARY KEY,
     `name` VARCHAR(15) NOT NULL,
-    last_name VARCHAR(15) NOT NULL,
+    last_name VARCHAR(15),
     email VARCHAR(50) UNIQUE NOT NULL,
     phone VARCHAR(8) UNIQUE NOT NULL,
     `address` VARCHAR(255)
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `user`  (
     perfil_id INT,
     rol_id INT,
     `user` VARCHAR(15) NOT NULL,
-    `password` VARCHAR(50) NOT NULL,
+    `password` VARCHAR(80) NOT NULL,
     create_ad TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (perfil_id) REFERENCES perfil(id) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (rol_id) REFERENCES rol(id) ON DELETE SET NULL ON UPDATE CASCADE

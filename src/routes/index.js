@@ -6,6 +6,7 @@ const rol = require('./rol.router');
 const ticketRouter = require('./ticket.router'); 
 const userperfilRouter = require('./user.router');
 const consultation = require('./consultation.router');
+const auth = require('./auth.router')
 // const deviceRouter = require('./');
 
 module.exports = [
@@ -16,5 +17,6 @@ module.exports = [
   rol,
   ticketRouter,
   userperfilRouter,
-  consultation
+  consultation,
+  auth
 ];

@@ -106,17 +106,19 @@ INSERT INTO rol (`name`, `description`) VALUES
 ('Tester', 'Encargado de pruebas y calidad');
 
 -- Insertar datos en la tabla user
+-- pass123
 INSERT INTO user (perfil_id, rol_id, `user`, `password`) VALUES
-(1, 1, 'admin1', 'pass123'),
-(2, 2, 'tech1', 'pass123'),
-(3, 3, 'client1', 'pass123'),
-(4, 4, 'support1', 'pass123'),
-(5, 5, 'manager1', 'pass123'),
-(6, 6, 'seller1', 'pass123'),
-(7, 7, 'supervisor1', 'pass123'),
-(8, 8, 'analyst1', 'pass123'),
-(9, 9, 'dev1', 'pass123'),
-(10, 10, 'tester1', 'pass123');
+(1, 1, 'admin1',    '$2a$10$KwJmj1gF.A./d8qJDnMj9OjCbMhgsWCRc5P.gwJklO6iXMq7pH0qu'),
+(2, 2, 'tech1',     '$2a$10$KwJmj1gF.A./d8qJDnMj9OjCbMhgsWCRc5P.gwJklO6iXMq7pH0qu'),
+(3, 3, 'client1',   '$2a$10$KwJmj1gF.A./d8qJDnMj9OjCbMhgsWCRc5P.gwJklO6iXMq7pH0qu'),
+(4, 4, 'support1',  '$2a$10$KwJmj1gF.A./d8qJDnMj9OjCbMhgsWCRc5P.gwJklO6iXMq7pH0qu'),
+(5, 5, 'manager1',  '$2a$10$KwJmj1gF.A./d8qJDnMj9OjCbMhgsWCRc5P.gwJklO6iXMq7pH0qu'),
+(6, 6, 'seller1',  '$2a$10$KwJmj1gF.A./d8qJDnMj9OjCbMhgsWCRc5P.gwJklO6iXMq7pH0qu'),
+(7, 7, 'supervisor1','$2a$10$KwJmj1gF.A./d8qJDnMj9OjCbMhgsWCRc5P.gwJklO6iXMq7pH0qu'),
+(8, 8, 'analyst1',  '$2a$10$KwJmj1gF.A./d8qJDnMj9OjCbMhgsWCRc5P.gwJklO6iXMq7pH0qu'),
+(9, 9, 'dev1',     '$2a$10$KwJmj1gF.A./d8qJDnMj9OjCbMhgsWCRc5P.gwJklO6iXMq7pH0qu'),
+(10, 10, 'tester1', '$2a$10$KwJmj1gF.A./d8qJDnMj9OjCbMhgsWCRc5P.gwJklO6iXMq7pH0qu');
+
 
 -- Insertar datos en la tabla device
 INSERT INTO device (branch, model, `type`, `description`, user_id) VALUES
@@ -130,6 +132,7 @@ INSERT INTO device (branch, model, `type`, `description`, user_id) VALUES
 ('Microsoft', 'Surface Pro 8', 'Tablet', 'Híbrido entre laptop y tablet', 8),
 ('Acer', 'Aspire 5', 'Laptop', 'Laptop asequible', 9),
 ('Razer', 'Blade 15', 'Laptop', 'Laptop gamer premium', 10);
+
 
 -- Insertar datos en la tabla consultations
 INSERT INTO consultations (transmiter, recivier, messaje) VALUES
